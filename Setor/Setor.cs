@@ -57,12 +57,20 @@ namespace Setor
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            MetodoSetor metodo = new MetodoSetor();
+            metodo.Nome = txtNomeSetor.Text;
+            metodo.Id = int.Parse(txtID.Text);
+            metodo.EditarSetor();
+
 
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            MetodoSetor metodo = new MetodoSetor();
+            metodo.Nome = txtNomeSetor.Text;   
+            metodo.Id = int.Parse(txtID.Text);   
+            metodo.ExcluirSetor();
         }
 
         private void btnListarPnome_Click(object sender, EventArgs e)
@@ -72,9 +80,9 @@ namespace Setor
 
         private void btnListarTodos_Click(object sender, EventArgs e)
         {
-            MetodoSetor ListarTodos = new MetodoSetor();
+            MetodoSetor metodo = new MetodoSetor();
 
-            ListarTodos.ListarTodosSetores(dataGrind);
+            metodo.ListarTodosSetores(dataGrind);
         }
 
         private void dataGrind_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

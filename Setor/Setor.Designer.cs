@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setor));
             dataGrind = new DataGridView();
             lblNomeSetor = new Label();
             lblid = new Label();
@@ -41,13 +42,14 @@
             btnListarTodos = new Button();
             btnListarPnome = new Button();
             label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGrind).BeginInit();
             SuspendLayout();
             // 
             // dataGrind
             // 
             dataGrind.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGrind.Location = new Point(33, 344);
+            dataGrind.Location = new Point(25, 279);
             dataGrind.Name = "dataGrind";
             dataGrind.RowHeadersWidth = 62;
             dataGrind.Size = new Size(833, 254);
@@ -59,7 +61,7 @@
             // 
             lblNomeSetor.AutoSize = true;
             lblNomeSetor.Font = new Font("Segoe UI", 12F);
-            lblNomeSetor.Location = new Point(27, 200);
+            lblNomeSetor.Location = new Point(19, 200);
             lblNomeSetor.Name = "lblNomeSetor";
             lblNomeSetor.Size = new Size(174, 21);
             lblNomeSetor.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             lblid.AutoSize = true;
             lblid.Font = new Font("Segoe UI", 12F);
-            lblid.Location = new Point(33, 272);
+            lblid.Location = new Point(344, 201);
             lblid.Name = "lblid";
             lblid.Size = new Size(28, 21);
             lblid.TabIndex = 2;
@@ -77,14 +79,14 @@
             // 
             // txtNomeSetor
             // 
-            txtNomeSetor.Location = new Point(32, 225);
+            txtNomeSetor.Location = new Point(24, 225);
             txtNomeSetor.Name = "txtNomeSetor";
-            txtNomeSetor.Size = new Size(596, 26);
+            txtNomeSetor.Size = new Size(298, 26);
             txtNomeSetor.TabIndex = 3;
             // 
             // btnGravar
             // 
-            btnGravar.Location = new Point(734, 77);
+            btnGravar.Location = new Point(726, 77);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(132, 49);
             btnGravar.TabIndex = 4;
@@ -96,7 +98,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNome.Location = new Point(33, 88);
+            lblNome.Location = new Point(25, 88);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(56, 21);
             lblNome.TabIndex = 5;
@@ -104,21 +106,21 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(33, 296);
+            txtID.Location = new Point(344, 225);
             txtID.Name = "txtID";
-            txtID.Size = new Size(165, 26);
+            txtID.Size = new Size(69, 26);
             txtID.TabIndex = 6;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(102, 88);
+            txtNome.Location = new Point(94, 88);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(526, 26);
             txtNome.TabIndex = 7;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(596, 289);
+            btnEditar.Location = new Point(588, 214);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(132, 49);
             btnEditar.TabIndex = 8;
@@ -128,7 +130,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(734, 289);
+            btnExcluir.Location = new Point(726, 214);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(132, 49);
             btnExcluir.TabIndex = 9;
@@ -138,39 +140,52 @@
             // 
             // btnListarTodos
             // 
-            btnListarTodos.Location = new Point(33, 614);
+            btnListarTodos.Image = (Image)resources.GetObject("btnListarTodos.Image");
+            btnListarTodos.Location = new Point(400, 551);
             btnListarTodos.Name = "btnListarTodos";
-            btnListarTodos.Size = new Size(833, 49);
+            btnListarTodos.Size = new Size(67, 49);
             btnListarTodos.TabIndex = 10;
-            btnListarTodos.Text = "Listar todos";
             btnListarTodos.UseVisualStyleBackColor = true;
             btnListarTodos.Click += btnListarTodos_Click;
             // 
             // btnListarPnome
             // 
-            btnListarPnome.Location = new Point(452, 289);
+            btnListarPnome.BackColor = Color.White;
+            btnListarPnome.Image = (Image)resources.GetObject("btnListarPnome.Image");
+            btnListarPnome.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListarPnome.Location = new Point(538, 214);
             btnListarPnome.Name = "btnListarPnome";
-            btnListarPnome.Size = new Size(132, 49);
+            btnListarPnome.Size = new Size(44, 49);
             btnListarPnome.TabIndex = 11;
-            btnListarPnome.Text = "Procurar";
-            btnListarPnome.UseVisualStyleBackColor = true;
+            btnListarPnome.UseVisualStyleBackColor = false;
             btnListarPnome.Click += btnListarPnome_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(33, 30);
+            label1.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(25, 30);
             label1.Name = "label1";
-            label1.Size = new Size(185, 28);
+            label1.Size = new Size(173, 28);
             label1.TabIndex = 12;
-            label1.Text = "Criação e Alteração ";
+            label1.Text = "Criação de Setor";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(19, 160);
+            label2.Name = "label2";
+            label2.Size = new Size(303, 28);
+            label2.TabIndex = 13;
+            label2.Text = "Alteração e Exclusão de Setor";
             // 
             // Setor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(918, 675);
+            ClientSize = new Size(888, 612);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnListarPnome);
             Controls.Add(btnListarTodos);
@@ -212,5 +227,6 @@
         private Button btnListarTodos;
         private Button btnListarPnome;
         private Label label1;
+        private Label label2;
     }
 }

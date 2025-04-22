@@ -65,11 +65,14 @@ namespace Setor
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlUpdate = "INSERT INTO setor (nome) VALUES (@nome)";
+
+                    
+                    string sqlUpdate = "UPDATE setor SET nome = @nome WHERE id = @Id";
 
                     MySqlCommand comandoSQL = new MySqlCommand(sqlUpdate, conexaoBanco);
 
                     comandoSQL.Parameters.AddWithValue("@nome", Nome);
+                    comandoSQL.Parameters.AddWithValue("@id", Id);
 
                     int resultado = comandoSQL.ExecuteNonQuery();
 
@@ -100,11 +103,12 @@ namespace Setor
                 {
                     using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                     {
-                        string sqlDelete = "DELETE INTO setor (nome) VALUES (@nome)";
+                        string sqlDelete = "DELETE FROM setor WHERE nome = @nome and id = @id";
 
                         MySqlCommand comandoSQL = new MySqlCommand(sqlDelete, conexaoBanco);
 
                         comandoSQL.Parameters.AddWithValue("@nome", Nome);
+                        comandoSQL.Parameters.AddWithValue("@id", Id);
 
                         int resultado = comandoSQL.ExecuteNonQuery();
 
@@ -169,7 +173,46 @@ namespace Setor
             }
         }
 
-        // public bool ListarSetorNome() { }
+        public bool ListarSetorNome(DataGridView DataGrind) 
+        {
+            try
+            {
+                using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
+                {
+
+                    string sqlSelect = "SELECT * FROM setor";
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlSelect, conexaoBanco);
+
+                    DataTable dataTable = new DataTable();
+
+                    dataAdapter.Fill(dataTable);
+
+                    DataGrind.AllowUserToAddRows = false;
+                    DataGrind.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    DataGrind.DataSource = dataTable;
+                    DataGrind.AutoResizeColumns();
+
+                    if (DataGrind.Rows.Count > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    DataGrind.ClearSelection();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Erro ao listar todos os objetos -> {ex.Message}");
+                return false;
+            }
+        }
+        
         public bool verificarSetorExistente()
         {
             try

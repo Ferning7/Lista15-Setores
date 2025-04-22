@@ -68,3 +68,4 @@ C:\Users\Aluno_Manha\source\repos\AtivSetores\Setor\obj\Debug\net8.0-windows\Set
 C:\Users\Aluno_Manha\source\repos\AtivSetores\Setor\obj\Debug\net8.0-windows\Setor.genruntimeconfig.cache
 C:\Users\Aluno_Manha\source\repos\AtivSetores\Setor\obj\Debug\net8.0-windows\ref\Setor.dll
 C:\Users\Aluno_Manha\source\repos\AtivSetores\Setor\obj\Debug\net8.0-windows\Setor.sourcelink.json
+C:\Users\Aluno_Manha\source\repos\AtivSetores\Setor\obj\Debug\net8.0-windows\Setor.Properties.Resources.resources
