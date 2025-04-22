@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\ativsetores\\setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\ativsetores\\setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\ativsetores\\setor\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 179,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MetodoSetor.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\MetodoSetor.cs",
+              "RelativeDocumentMoniker": "Setor\\MetodoSetor.cs",
+              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\MetodoSetor.cs",
+              "RelativeToolTip": "Setor\\MetodoSetor.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAgwMQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:14:36.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 221,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Setor.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\Setor.cs",
+              "RelativeDocumentMoniker": "Setor\\Setor.cs",
+              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\Setor.cs [Projeto]",
+              "RelativeToolTip": "Setor\\Setor.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:27:12.81Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Setor.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\Setor.cs",
+              "RelativeDocumentMoniker": "Setor\\Setor.cs",
+              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\Setor.cs",
+              "RelativeToolTip": "Setor\\Setor.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T11:53:22.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConexaoDB.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\ConexaoDB.cs",
+              "RelativeDocumentMoniker": "Setor\\ConexaoDB.cs",
+              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\AtivSetores\\Setor\\ConexaoDB.cs",
+              "RelativeToolTip": "Setor\\ConexaoDB.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T11:36:28.088Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
