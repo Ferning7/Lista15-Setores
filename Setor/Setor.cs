@@ -28,18 +28,25 @@ namespace Setor
                     MetodoSetor metodos = new MetodoSetor();
                     metodos.Nome = txtNome.Text;
 
-                    if (metodos.InserirSetor())
+                    if (metodos.verificarSetorExistente())
                     {
-                        MessageBox.Show("Setor gravado com sucesso!");
-                    }
-                    else
+                        if (metodos.InserirSetor())
+                        {
+                            MessageBox.Show("Setor gravado com sucesso!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível gravar o nome do Setor");
+                        }
+                    } else
                     {
-                        MessageBox.Show("Não foi possível gravar o nome do Setor");
+                        MessageBox.Show("Setor já existente!");
                     }
+
                 }
                 else
                 {
-                    MessageBox.Show("Não foi possível gravar o nome do Setor 22");
+                    MessageBox.Show("Insira um nome para o novo Setor");
                 }
             }
             catch (Exception ex)
@@ -64,6 +71,13 @@ namespace Setor
         }
 
         private void btnListarTodos_Click(object sender, EventArgs e)
+        {
+            MetodoSetor ListarTodos = new MetodoSetor();
+
+            ListarTodos.ListarTodosSetores(dataGrind);
+        }
+
+        private void dataGrind_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -53,6 +53,7 @@
             dataGrind.Size = new Size(833, 254);
             dataGrind.TabIndex = 0;
             dataGrind.CellContentClick += dataGrind_CellContentClick;
+            dataGrind.CellDoubleClick += dataGrind_CellDoubleClick;
             // 
             // lblNomeSetor
             // 

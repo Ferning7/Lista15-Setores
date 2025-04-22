@@ -194,7 +194,7 @@ namespace Setor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao verificar setor {ex.Message}");
+                MessageBox.Show($"Erro ao verificar setor       ' {ex.Message}");
                 return false;
             }
         }
