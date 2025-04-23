@@ -134,10 +134,12 @@ namespace Setor
         private void btnListarTodos_Click(object sender, EventArgs e)
         {
             MetodoSetor metodo = new MetodoSetor();
-
             metodo.ListarTodosSetores(dataGrind);
 
+            int colunaIdIndex = dataGrind.Columns["id"].Index;
 
+            
+            dataGrind.Columns[colunaIdIndex].Width = 100;
         }
 
         private void dataGrind_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -157,6 +159,9 @@ namespace Setor
             txtID.Clear();
             dataGrind.ClearSelection();
             txtID.Enabled = true;
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
+            
         }
     }
 }

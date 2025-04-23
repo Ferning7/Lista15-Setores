@@ -49,9 +49,12 @@
             // 
             // dataGrind
             // 
+            dataGrind.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGrind.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGrind.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGrind.Location = new Point(25, 279);
             dataGrind.Name = "dataGrind";
+            dataGrind.RowHeadersVisible = false;
             dataGrind.RowHeadersWidth = 62;
             dataGrind.Size = new Size(833, 254);
             dataGrind.TabIndex = 0;

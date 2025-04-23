@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Setor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+decb2664f588149e1f1f14cc44ee4304ef83dc4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e3cefd04b1a9f97611682d24e0519622b81d14f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Setor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Setor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

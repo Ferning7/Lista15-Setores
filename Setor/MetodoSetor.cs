@@ -143,7 +143,7 @@ namespace Setor
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
 
-                    string sqlSelect = "SELECT * FROM setor";
+                    string sqlSelect = "SELECT * FROM setor ORDER BY nome ASC";
 
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlSelect, conexaoBanco);
 
@@ -182,12 +182,14 @@ namespace Setor
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlSelect = "SELECT * FROM setor WHERE nome = @nome OR id = @id";
+                    // string sqlSelect = "SELECT * FROM setor WHERE nome = @nome OR id = @id";
+                    string sqlSelectLike = "SELECT * FROM setor WHERE nome LIKE @nome OR id = @id ORDER BY nome ASC";
 
                     // Cria o comando com os parâmetros
-                    MySqlCommand comandoSQL = new MySqlCommand(sqlSelect, conexaoBanco);
-                    comandoSQL.Parameters.AddWithValue("@nome", Nome);
+                    MySqlCommand comandoSQL = new MySqlCommand(sqlSelectLike, conexaoBanco);
+                   // comandoSQL.Parameters.AddWithValue("@nome", Nome);
                     comandoSQL.Parameters.AddWithValue("@id", Id);
+                    comandoSQL.Parameters.AddWithValue("@nome", "%" + Nome + "%");
 
                     // Usa o comando no DataAdapter corretamente
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comandoSQL);
