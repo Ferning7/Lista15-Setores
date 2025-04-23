@@ -36,13 +36,14 @@
             btnGravar = new Button();
             lblNome = new Label();
             txtID = new TextBox();
-            txtNome = new TextBox();
             btnEditar = new Button();
             btnExcluir = new Button();
             btnListarTodos = new Button();
             btnListarPnome = new Button();
             label1 = new Label();
             label2 = new Label();
+            txtNome = new TextBox();
+            btnLimpar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGrind).BeginInit();
             SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             // 
             // btnGravar
             // 
+            btnGravar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGravar.Location = new Point(726, 77);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(132, 49);
@@ -111,18 +113,12 @@
             txtID.Size = new Size(69, 26);
             txtID.TabIndex = 6;
             // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(94, 88);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(526, 26);
-            txtNome.TabIndex = 7;
-            // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(588, 214);
+            btnEditar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(649, 214);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(132, 49);
+            btnEditar.Size = new Size(103, 49);
             btnEditar.TabIndex = 8;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -130,9 +126,10 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(726, 214);
+            btnExcluir.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcluir.Location = new Point(758, 214);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(132, 49);
+            btnExcluir.Size = new Size(100, 49);
             btnExcluir.TabIndex = 9;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
@@ -140,22 +137,22 @@
             // 
             // btnListarTodos
             // 
-            btnListarTodos.Image = (Image)resources.GetObject("btnListarTodos.Image");
-            btnListarTodos.Location = new Point(400, 551);
+            btnListarTodos.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListarTodos.Location = new Point(25, 551);
             btnListarTodos.Name = "btnListarTodos";
-            btnListarTodos.Size = new Size(67, 49);
+            btnListarTodos.Size = new Size(700, 49);
             btnListarTodos.TabIndex = 10;
+            btnListarTodos.Text = "Listar todos";
             btnListarTodos.UseVisualStyleBackColor = true;
             btnListarTodos.Click += btnListarTodos_Click;
             // 
             // btnListarPnome
             // 
-            btnListarPnome.BackColor = Color.White;
+            btnListarPnome.BackColor = Color.Transparent;
             btnListarPnome.Image = (Image)resources.GetObject("btnListarPnome.Image");
-            btnListarPnome.ImageAlign = ContentAlignment.MiddleLeft;
-            btnListarPnome.Location = new Point(538, 214);
+            btnListarPnome.Location = new Point(439, 214);
             btnListarPnome.Name = "btnListarPnome";
-            btnListarPnome.Size = new Size(44, 49);
+            btnListarPnome.Size = new Size(53, 49);
             btnListarPnome.TabIndex = 11;
             btnListarPnome.UseVisualStyleBackColor = false;
             btnListarPnome.Click += btnListarPnome_Click;
@@ -180,11 +177,30 @@
             label2.TabIndex = 13;
             label2.Text = "Alteração e Exclusão de Setor";
             // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(94, 88);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(526, 26);
+            txtNome.TabIndex = 7;
+            // 
+            // btnLimpar
+            // 
+            btnLimpar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpar.Location = new Point(745, 551);
+            btnLimpar.Name = "btnLimpar";
+            btnLimpar.Size = new Size(113, 49);
+            btnLimpar.TabIndex = 14;
+            btnLimpar.Text = "Limpar";
+            btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click;
+            // 
             // Setor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(888, 612);
+            Controls.Add(btnLimpar);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnListarPnome);
@@ -221,12 +237,13 @@
         private Button btnGravar;
         private Label lblNome;
         private TextBox txtID;
-        private TextBox txtNome;
         private Button btnEditar;
         private Button btnExcluir;
         private Button btnListarTodos;
         private Button btnListarPnome;
         private Label label1;
         private Label label2;
+        private TextBox txtNome;
+        private Button btnLimpar;
     }
 }

@@ -78,10 +78,13 @@ namespace Setor
 
                     if (resultado > 0)
                     {
+                        MessageBox.Show("Nome do Setor editado!");
                         return true;
+                        
                     }
                     else
                     {
+                        MessageBox.Show("Erro ao Editar");
                         return false;
                     }
                 }
@@ -173,53 +176,50 @@ namespace Setor
             }
         }
 
-        public bool ListarSetorNome(DataGridView DataGrind) 
+        public bool ListarSetorNome(DataGridView DataGrind)
         {
             try
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
+                    string sqlSelect = "SELECT * FROM setor WHERE nome = @nome OR id = @id";
 
-                    string sqlSelect = "SELECT * FROM setor";
+                    // Cria o comando com os parâmetros
+                    MySqlCommand comandoSQL = new MySqlCommand(sqlSelect, conexaoBanco);
+                    comandoSQL.Parameters.AddWithValue("@nome", Nome);
+                    comandoSQL.Parameters.AddWithValue("@id", Id);
 
-                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlSelect, conexaoBanco);
-
+                    // Usa o comando no DataAdapter corretamente
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comandoSQL);
                     DataTable dataTable = new DataTable();
-
                     dataAdapter.Fill(dataTable);
 
+                    // Configura o DataGridView
                     DataGrind.AllowUserToAddRows = false;
                     DataGrind.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
                     DataGrind.DataSource = dataTable;
                     DataGrind.AutoResizeColumns();
-
-                    if (DataGrind.Rows.Count > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
                     DataGrind.ClearSelection();
+
+                    // Verifica se veio algo
+                    return dataTable.Rows.Count > 0;
                 }
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show($"Erro ao listar todos os objetos -> {ex.Message}");
+                MessageBox.Show($"Erro ao listar os setores -> {ex.Message}");
                 return false;
             }
         }
-        
+
+
         public bool verificarSetorExistente()
         {
             try
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlconsultaSetor = "select COUNT(*) from usuarios where nome = @nome ";
+                    string sqlconsultaSetor = "SELECT COUNT(*) FROM setor WHERE nome = @nome ";
 
                     MySqlCommand comando = new MySqlCommand(sqlconsultaSetor, conexaoBanco);
                     comando.Parameters.AddWithValue("@nome", Nome);
@@ -237,7 +237,7 @@ namespace Setor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao verificar setor       ' {ex.Message}");
+                MessageBox.Show($"Erro ao verificar setor -> {ex.Message}");
                 return false;
             }
         }
